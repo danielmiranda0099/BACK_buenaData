@@ -17,6 +17,18 @@ const User = sequelize.define(
     },
     fechaNacimiento: {
       type: DataTypes.DATE,
+    },
+    ocupacion: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING
+    },
+    telefono: {
+      type: DataTypes.INTEGER
+    },
+    image: {
+      type: DataTypes.STRING
     }
   },
   {
