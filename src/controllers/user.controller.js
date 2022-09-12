@@ -37,8 +37,8 @@ class userController {
 
     async crear(req, res) {
         try {
-            const {nombre, apellido, fechaNacimiento, numeroId} = req.body;
-            const newUser = {nombre, apellido, fechaNacimiento, numeroId};
+            const newUser = req.body;
+            console.log('******** newUser *******', newUser);
             const resNewUser = await userModel.create(newUser);
             console.log(resNewUser);
             res.status(200).json({message:'Usuario creado', newUser});
@@ -51,14 +51,17 @@ class userController {
     async actualizar(req, res) {
         try {
             const {id} = req.params;
-            const {nombre, apellido} = req.body;
-
+            const newData = req.body;
+            console.log("****** Updating ******",newData);
+            
             const userUpdated = await userModel.update(
-                {nombre, apellido}, 
+                newData, 
                 {returning: true,where: {numeroId:id}}
             )
-            console.log("******numero Updating ******",userUpdated);
-            res.status(200).json({message:'Usuario actualizado', userUpdated});
+            const countActualizados = userUpdated[0];
+            const user = userUpdated[1][0]
+            console.log("******numero Updating ******",user, countActualizados);
+            res.status(200).json({message:'Usuario actualizado', user, countActualizados});
         } catch (error) {
             console.log(error);
             res.status(500).json({message:'ERROR INTERNO --> actualizar() user.controller', error});
