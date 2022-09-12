@@ -5,9 +5,9 @@
 ### `POST` http://localhost:3001/api/users
 ### `PATCH` http://localhost:3001/api/users/:id
 ### `DELETE` http://localhost:3001/api/users
-![](https://raw.githubusercontent.com/danielmiranda0099/FRONT_buenaData/master/public/assets/captura.PNG)
-![](https://raw.githubusercontent.com/danielmiranda0099/FRONT_buenaData/master/public/assets/captura1.PNG)
-![](https://raw.githubusercontent.com/danielmiranda0099/FRONT_buenaData/master/public/assets/captura2.PNG)
+![](https://raw.githubusercontent.com/danielmiranda0099/BACK_buenaData/master/src/public/assets/Captura.PNG)
+![](https://raw.githubusercontent.com/danielmiranda0099/BACK_buenaData/master/src/public/assets/Captura1.PNG)
+![](https://raw.githubusercontent.com/danielmiranda0099/BACK_buenaData/master/src/public/assets/Captura2.PNG)
 ## Pasos para instalar el proyecto.
 ### `1. Clona el proyecto en tu entorno local`
 ### `2. npm install`
